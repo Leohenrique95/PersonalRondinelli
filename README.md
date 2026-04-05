@@ -23,7 +23,7 @@ Landing page profissional para um personal trainer, com foco em apresentar os pl
 ## Funcionalidades Interativas (JavaScript)
 
 1. **Validação de formulário de contato**
-   - Verifica nome, e-mail e mensagem antes do envio
+   - Verifica nome, telefone e mensagem antes do envio
    - Exibe mensagens de erro acessíveis via `role="alert"`
    - Exibe confirmação de envio com auto-ocultamento
 
@@ -98,6 +98,10 @@ O layout adapta-se a três breakpoints:
 
 ## Autores
 
+Aluno: Leonardo Henrique da Silva - RA: 25164877-2
+Aluno: Rafael de Oliveira Ferreira - RA: 25178076-2
+Aluno: Thiago Pereira de Paula - RA: 25349592-2
 Trabalho Prático 1 — Programação Front-End  
-Curso: Análise e Desenvolvimento de Sistemas  
+Curso: Análise e Desenvolvimento de Sistemas 
+Turma: A (Noturno) - 3° período
 Professor: José Carlos Domingues Flores
