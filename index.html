@@ -4,14 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Personal Rondinelli | Consultoria Online</title>
+  <meta name="description" content="Personal Trainer Rondinelli Albuquerque — consultoria online de emagrecimento e hipertrofia. CREF: 039067-G/PR">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <!-- LINK DE ACESSIBILIDADE: PULAR NAVEGAÇÃO (WCAG 2.4.1) -->
+  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
   <!-- NAVBAR FIXA -->
-  <nav>
+  <nav role="navigation" aria-label="Menu principal">
     <a href="#pricing">Planos</a>
     <a href="#about-me">Sobre</a>
     <a href="#how-it-works">Como Funciona</a>
@@ -20,137 +24,275 @@
     <a href="#contact">Contato</a>
   </nav>
 
-  <!-- HEADER -->
-  <header class="hero">
+  <!-- HEADER / HERO -->
+  <header class="hero" role="banner">
     <div class="container">
       <div class="profile-container">
-        <img src="logo-rondi.png" alt="Time Rondi" class="profile-img">
+        <img src="logo-rondi.png" alt="Logotipo Time Rondi — Personal Trainer" class="profile-img">
       </div>
       <h1>Rondinelli <span class="highlight">Albuquerque</span></h1>
       <p class="tagline">Transformando corpos e hábitos • Consultoria Online</p>
     </div>
   </header>
 
- 
-  <!-- SOBRE -->
-  <section class="about-me" id="about-me">
-    <div class="container">
-      <div class="about-content">
-        <div class="about-text">
-          <h2>Quem é o <span class="highlight">Personal Rondi?</span></h2>
-          <p>Rondinelli Albuquerque é especialista em <strong>Emagrecimento e Hipertrofia</strong>, dedicado a transformar não apenas corpos, mas hábitos.</p>
-          <p>Com uma metodologia baseada em ciência e resultados reais, o Time Rondi oferece um acompanhamento de alta performance através da consultoria online.</p>
-          <div class="cref-tag">CREF: 039067-G/PR</div>
+  <main id="main-content">
+
+    <!-- SOBRE -->
+    <section class="about-me" id="about-me" aria-labelledby="about-title">
+      <div class="container">
+        <article class="about-content">
+          <div class="about-text">
+            <h2 id="about-title">Quem é o <span class="highlight">Personal Rondi?</span></h2>
+            <p>Rondinelli Albuquerque é especialista em <strong>Emagrecimento e Hipertrofia</strong>, dedicado a transformar não apenas corpos, mas hábitos.</p>
+            <p>Com uma metodologia baseada em ciência e resultados reais, o Time Rondi oferece um acompanhamento de alta performance através da consultoria online.</p>
+            <div class="cref-tag" aria-label="Registro no Conselho Regional de Educação Física">CREF: 039067-G/PR</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- COMO FUNCIONA -->
+    <section class="how-it-works" id="how-it-works" aria-labelledby="how-title">
+      <div class="container">
+        <h2 id="how-title">Como <span class="highlight">Funciona</span></h2>
+        <div class="steps-grid" role="list">
+          <article class="step-card" role="listitem">
+            <i class="fas fa-mobile-alt" aria-hidden="true"></i>
+            <h3>1. Acesso ao App</h3>
+            <p>Receba seu treino personalizado direto no aplicativo.</p>
+          </article>
+          <article class="step-card" role="listitem">
+            <i class="fas fa-dumbbell" aria-hidden="true"></i>
+            <h3>2. Treino Orientado</h3>
+            <p>Exercícios com vídeos explicativos para executar com segurança.</p>
+          </article>
+          <article class="step-card" role="listitem">
+            <i class="fas fa-headset" aria-hidden="true"></i>
+            <h3>3. Suporte Constante</h3>
+            <p>Contato direto para tirar dúvidas e ajustar seu plano.</p>
+          </article>
+          <article class="step-card" role="listitem">
+            <i class="fas fa-chart-line" aria-hidden="true"></i>
+            <h3>4. Evolução Monitorada</h3>
+            <p>Acompanhamento dos resultados e ajustes para máxima performance.</p>
+          </article>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- COMO FUNCIONA -->
-  <section class="how-it-works" id="how-it-works">
-    <div class="container">
-      <h2>Como <span class="highlight">Funciona</span></h2>
-      <div class="steps-grid">
-        <div class="step-card"><i class="fas fa-mobile-alt"></i><h3>1. Acesso ao App</h3><p>Receba seu treino personalizado direto no aplicativo.</p></div>
-        <div class="step-card"><i class="fas fa-dumbbell"></i><h3>2. Treino Orientado</h3><p>Exercícios com vídeos explicativos para executar com segurança.</p></div>
-        <div class="step-card"><i class="fas fa-headset"></i><h3>3. Suporte Constante</h3><p>Contato direto para tirar dúvidas e ajustar seu plano.</p></div>
-        <div class="step-card"><i class="fas fa-chart-line"></i><h3>4. Evolução Monitorada</h3><p>Acompanhamento dos resultados e ajustes para máxima performance.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- RESULTADOS -->
-  <section class="results" id="results">
-    <div class="container">
-      <h2>Resultados <span class="highlight">Incríveis</span></h2>
-      <div class="results-grid">
-        <a href="https://www.instagram.com/mwrita/" target="_blank"><img src="maria.jpeg" alt="Resultado aluno 1"></a>
-        <a href="https://www.instagram.com/vanessa.ons/" target="_blank"><img src="Vanessa.jpeg" alt="Resultado aluno 2"></a>
-        <a href="https://www.instagram.com/gnseumesma/" target="_blank"><img src="Naty.jpeg" alt="Resultado aluno 3"></a>
-      </div>
-    </div>
-  </section>
-
- <!-- PLANOS -->
-  <section class="pricing" id="pricing">
-    <div class="container">
-      <h2 class="section-title">Escolha seu <span class="highlight">Plano</span></h2>
-      <div class="plans-grid">
-        <!-- Plano Mensal -->
-        <div class="plan-card">
-          <div class="plan-badge">O MAIS PROCURADO</div>
-          <h3>Plano Mensal</h3>
-          <p class="plan-duration">1 mês de acesso</p>
-          <div class="price-container">
-            <span class="old-price">R$ 80,00</span>
-            <span class="current-price">R$ 39,90</span>
-          </div>
-          <ul class="plan-features">
-            <li><i class="fas fa-check"></i> Treino via App MFIT</li>
-            <li><i class="fas fa-check"></i> Suporte Individual</li>
-            <li><i class="fas fa-check"></i> Vídeos dos Exercícios</li>
-          </ul>
-          <a href="https://wa.me/5541988393639?text=Ol%C3%A1%20Rondi,%20visitei%20seu%20site%20e%20fiquei%20interessado%20na%20consultoria%20online%20no%20plano%20Mensal" class="btn-buy" target="_blank">
-            QUERO ESTE
-        </a>
+    <!-- RESULTADOS -->
+    <section class="results" id="results" aria-labelledby="results-title">
+      <div class="container">
+        <h2 id="results-title">Resultados <span class="highlight">Incríveis</span></h2>
+        <div class="results-grid">
+          <a href="https://www.instagram.com/mwrita/" target="_blank" rel="noopener noreferrer" aria-label="Ver perfil de Maria no Instagram — resultado de transformação">
+            <img src="maria.jpeg" alt="Transformação corporal da aluna Maria — antes e depois">
+          </a>
+          <a href="https://www.instagram.com/vanessa.ons/" target="_blank" rel="noopener noreferrer" aria-label="Ver perfil de Vanessa no Instagram — resultado de transformação">
+            <img src="Vanessa.jpeg" alt="Transformação corporal da aluna Vanessa — antes e depois">
+          </a>
+          <a href="https://www.instagram.com/gnseumesma/" target="_blank" rel="noopener noreferrer" aria-label="Ver perfil de Naty no Instagram — resultado de transformação">
+            <img src="Naty.jpeg" alt="Transformação corporal da aluna Naty — antes e depois">
+          </a>
         </div>
-        <!-- Plano Trimestral -->
-        <div class="plan-card">
-          <h3>Plano Trimestral</h3>
-          <p class="plan-duration">3 meses de acesso</p>
-          <div class="price-container">
-            <span class="current-price">R$ 112,00</span>
-            <span class="installments">até 3x no cartão</span>
-          </div>
-          <ul class="plan-features">
-            <li><i class="fas fa-check"></i> Planejamento 90 dias</li>
-            <li><i class="fas fa-check"></i> Ajustes de Carga</li>
-            <li><i class="fas fa-check"></i> Foco em Resultados</li>
-          </ul>
-          <a href="https://wa.me/5541988393639?text=Ol%C3%A1%20Rondi,%20visitei%20seu%20site%20e%20fiquei%20interessado%20na%20consultoria%20online%20no%20plano%20Trimestral" class="btn-buy" target="_blank">
-            QUERO ESTE
+      </div>
+    </section>
+
+    <!-- PLANOS -->
+    <section class="pricing" id="pricing" aria-labelledby="pricing-title">
+      <div class="container">
+        <h2 class="section-title" id="pricing-title">Escolha seu <span class="highlight">Plano</span></h2>
+        <div class="plans-grid">
+
+          <!-- Plano Mensal -->
+          <article class="plan-card" aria-label="Plano Mensal">
+            <div class="plan-badge" aria-label="Destaque: o mais procurado">O MAIS PROCURADO</div>
+            <h3>Plano Mensal</h3>
+            <p class="plan-duration">1 mês de acesso</p>
+            <div class="price-container">
+              <span class="old-price" aria-label="Preço original: R$ 80,00">R$ 80,00</span>
+              <span class="current-price" aria-label="Preço atual: R$ 39,90">R$ 39,90</span>
+            </div>
+            <ul class="plan-features" aria-label="Recursos incluídos">
+              <li><i class="fas fa-check" aria-hidden="true"></i> Treino via App MFIT</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Suporte Individual</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Vídeos dos Exercícios</li>
+            </ul>
+            <a href="https://wa.me/5541988393639?text=Ol%C3%A1%20Rondi,%20visitei%20seu%20site%20e%20fiquei%20interessado%20na%20consultoria%20online%20no%20plano%20Mensal"
+               class="btn-buy" target="_blank" rel="noopener noreferrer" aria-label="Contratar Plano Mensal via WhatsApp">
+              QUERO ESTE
             </a>
-        </div>
-        <!-- Plano Semestral -->
-        <div class="plan-card highlight-card">
-          <div class="promo-tag">LEVE 7 PAGUE 6</div>
-          <h3>Plano Semestral</h3>
-          <p class="plan-duration">6 meses de acesso</p>
-          <div class="price-container">
-            <span class="current-price">R$ 239,40</span>
-            <span class="installments">até 6x no cartão</span>
-          </div>
-          <ul class="plan-features">
-            <li><i class="fas fa-star"></i> Melhor Custo-Benefício</li>
-            <li><i class="fas fa-check"></i> Evolução Garantida</li>
-            <li><i class="fas fa-check"></i> Suporte VIP</li>
-          </ul>
-          <a href="https://wa.me/5541988393639?text=Ol%C3%A1%20Rondi,%20visitei%20seu%20site%20e%20fiquei%20interessado%20na%20consultoria%20online%20no%20plano%20Semestral" class="btn-buy" target="_blank">
-        QUERO ESTE
+          </article>
+
+          <!-- Plano Trimestral -->
+          <article class="plan-card" aria-label="Plano Trimestral">
+            <h3>Plano Trimestral</h3>
+            <p class="plan-duration">3 meses de acesso</p>
+            <div class="price-container">
+              <span class="current-price" aria-label="Preço: R$ 112,00">R$ 112,00</span>
+              <span class="installments">até 3x no cartão</span>
+            </div>
+            <ul class="plan-features" aria-label="Recursos incluídos">
+              <li><i class="fas fa-check" aria-hidden="true"></i> Planejamento 90 dias</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Ajustes de Carga</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Foco em Resultados</li>
+            </ul>
+            <a href="https://wa.me/5541988393639?text=Ol%C3%A1%20Rondi,%20visitei%20seu%20site%20e%20fiquei%20interessado%20na%20consultoria%20online%20no%20plano%20Trimestral"
+               class="btn-buy" target="_blank" rel="noopener noreferrer" aria-label="Contratar Plano Trimestral via WhatsApp">
+              QUERO ESTE
             </a>
+          </article>
+
+          <!-- Plano Semestral -->
+          <article class="plan-card highlight-card" aria-label="Plano Semestral — melhor custo-benefício">
+            <div class="promo-tag" aria-label="Promoção: leve 7 pague 6">LEVE 7 PAGUE 6</div>
+            <h3>Plano Semestral</h3>
+            <p class="plan-duration">6 meses de acesso</p>
+            <div class="price-container">
+              <span class="current-price" aria-label="Preço: R$ 239,40">R$ 239,40</span>
+              <span class="installments">até 6x no cartão</span>
+            </div>
+            <ul class="plan-features" aria-label="Recursos incluídos">
+              <li><i class="fas fa-star" aria-hidden="true"></i> Melhor Custo-Benefício</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Evolução Garantida</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Suporte VIP</li>
+            </ul>
+            <a href="https://wa.me/5541988393639?text=Ol%C3%A1%20Rondi,%20visitei%20seu%20site%20e%20fiquei%20interessado%20na%20consultoria%20online%20no%20plano%20Semestral"
+               class="btn-buy" target="_blank" rel="noopener noreferrer" aria-label="Contratar Plano Semestral via WhatsApp">
+              QUERO ESTE
+            </a>
+          </article>
+
+        </div><!-- /plans-grid -->
+      </div><!-- /container -->
+    </section><!-- /pricing -->
+
+    <!-- FAQ -->
+    <section class="faq" id="faq" aria-labelledby="faq-title">
+      <div class="container">
+        <h2 id="faq-title">Dúvidas <span class="highlight">Frequentes</span></h2>
+
+        <div class="faq-list" role="list">
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-1">
+              Preciso de equipamentos?
+              <i class="fas fa-chevron-down faq-icon" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer" id="faq-answer-1" role="region">
+              <p>Não, os treinos podem ser adaptados para qualquer ambiente, seja academia, casa ou ao ar livre.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-2">
+              O treino é para iniciantes?
+              <i class="fas fa-chevron-down faq-icon" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer" id="faq-answer-2" role="region">
+              <p>Sim, os planos são totalmente personalizados conforme seu nível de condicionamento físico.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-3">
+              Como recebo meu treino?
+              <i class="fas fa-chevron-down faq-icon" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer" id="faq-answer-3" role="region">
+              <p>Seu treino é disponibilizado diretamente no aplicativo MFIT, com vídeos explicativos de cada exercício.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-4">
+              Posso cancelar a qualquer momento?
+              <i class="fas fa-chevron-down faq-icon" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer" id="faq-answer-4" role="region">
+              <p>Sim. Entre em contato pelo WhatsApp para realizar o cancelamento sem burocracia.</p>
+            </div>
+          </div>
+
         </div>
-      </div>      
-  </section>
+      </div>
+    </section>
 
-  <!-- FAQ -->
-  <section class="faq" id="faq">
-    <div class="container">
-      <h2>Dúvidas <span class="highlight">Frequentes</span></h2>
-      <details><summary>Preciso de equipamentos?</summary><p>Não, os treinos podem ser adaptados para qualquer ambiente.</p></details>
-      <details><summary>O treino é para iniciantes?</summary><p>Sim, os planos são personalizados conforme seu nível.</p></details>
+    <!-- FORMULÁRIO DE CONTATO -->
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <h2 id="contact-title">Fale <span class="highlight">Conosco</span></h2>
+        <p class="contact-subtitle">Tem alguma dúvida? Envie uma mensagem e retornaremos em breve!</p>
+
+        <form id="contact-form" novalidate aria-label="Formulário de contato">
+          <div class="form-group">
+            <label for="contact-name">Nome completo <span aria-hidden="true">*</span></label>
+            <input
+              type="text"
+              id="contact-name"
+              name="name"
+              placeholder="Seu nome"
+              autocomplete="name"
+              required
+              aria-required="true"
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="contact-telefone">Telefone <span aria-hidden="true">*</span></label>
+              <input
+                type="tel"
+                id="contact-telefone"
+                name="telefone"
+                placeholder="(99) 99999-9999"
+                autocomplete="tel"
+                required
+                aria-required="true"
+              >
+          </div>
+
+          <div class="form-group">
+            <label for="contact-message">Mensagem <span aria-hidden="true">*</span></label>
+            <textarea
+              id="contact-message"
+              name="message"
+              rows="5"
+              placeholder="Escreva sua mensagem aqui..."
+              required
+              aria-required="true"
+            ></textarea>
+          </div>
+
+          <div id="form-feedback" class="form-success" role="alert" style="display:none;"></div>
+
+          <button type="submit" class="btn-buy btn-submit">
+            <i class="fas fa-paper-plane" aria-hidden="true"></i> Enviar Mensagem
+          </button>
+        </form>
+      </div>
+    </section>
+
+  </main><!-- /main -->
+
+  <!-- RODAPÉ / CONTATO REDES -->
+  <footer id="contact-social" role="contentinfo">
+    <h2>Entre em <span class="highlight">Contato</span></h2>
+    <div class="social-icons-container">
+      <a href="https://wa.me/41988393639" class="icon-btn whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Enviar mensagem pelo WhatsApp">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+      </a>
+      <a href="https://www.instagram.com/personalrondinelli" class="icon-btn instagram" target="_blank" rel="noopener noreferrer" aria-label="Visitar perfil no Instagram">
+        <i class="fab fa-instagram" aria-hidden="true"></i>
+      </a>
     </div>
-  </section>
+    <p>&copy; 2026 Rondinelli Albuquerque | CREF: 039067-G/PR</p>
+  </footer>
 
-  <!-- CONTATO -->
-<footer>
-  <h2>Entre em <span class="highlight">Contato</span></h2>
-  <div class="social-icons-container">
-    <a href="https://wa.me/41988393639" class="icon-btn whatsapp" target="_blank">
-      <i class="fab fa-whatsapp"></i>
-    </a>
-    <a href="https://www.instagram.com/personalrondinelli" class="icon-btn instagram" target="_blank">
-      <i class="fab fa-instagram"></i>
-    </a>
-  </div>
-  <p>&copy; 2026 Rondinelli Albuquerque | CREF: 039067-G/PR</p>
-</footer>
+  <!-- BOTÃO VOLTAR AO TOPO -->
+  <button id="back-to-top" aria-label="Voltar ao topo da página" title="Voltar ao topo">
+    <i class="fas fa-chevron-up" aria-hidden="true"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
