@@ -1,14 +1,33 @@
-// ============================================================
-//  Personal Rondi — script.js
-//  Funcionalidades JavaScript implementadas:
-//  1. Validação de formulário de contato
-//  2. Destaque dinâmico do link ativo na navbar (Intersection Observer)
-//  3. Accordion animado no FAQ (substituindo <details> nativo)
-//  4. Botão "Voltar ao topo"
-//  5. Animação de entrada das seções (scroll reveal)
-// ============================================================
+// Valida formatos brasileiros: (99) 99999-9999 ou 99999999999
+function validatePhone(phone) {
+  return /^\(?\d{2}\)?\s?\d{4,5}-?\d{4}$/.test(phone);
+}
 
-// ─── 1. VALIDAÇÃO DO FORMULÁRIO DE CONTATO ──────────────────
+// Exibe mensagem de erro acessível abaixo do campo
+function showError(input, msg) {
+  const span = document.createElement('span');
+  span.className = 'error-msg';
+  span.setAttribute('role', 'alert');
+  span.textContent = msg;
+  input.classList.add('input-error');
+  input.parentNode.insertBefore(span, input.nextSibling);
+}
+
+// Remove todos os erros anteriores do formulário
+function clearErrors() {
+  document.querySelectorAll('.error-msg').forEach(el => el.remove());
+  document.querySelectorAll('.input-error').forEach(el => el.classList.remove('input-error'));
+}
+
+// Exibe mensagem de sucesso e a oculta após 5 segundos
+function showSuccess() {
+  const feedback = document.getElementById('form-feedback');
+  feedback.textContent = '✅ Mensagem enviada com sucesso! Entraremos em contato em breve.';
+  feedback.className = 'form-success';
+  feedback.style.display = 'block';
+  setTimeout(() => { feedback.style.display = 'none'; }, 5000);
+}
+
 function setupContactForm() {
   const form = document.getElementById('contact-form');
   if (!form) return;
@@ -16,9 +35,9 @@ function setupContactForm() {
   form.addEventListener('submit', function (e) {
     e.preventDefault();
 
-    const name    = document.getElementById('contact-name');
+    const name     = document.getElementById('contact-name');
     const telefone = document.getElementById('contact-telefone');
-    const message = document.getElementById('contact-message');
+    const message  = document.getElementById('contact-message');
     let valid = true;
 
     // Limpa erros anteriores
@@ -39,51 +58,19 @@ function setupContactForm() {
       valid = false;
     }
 
-if (valid) {
-  const destinatario = "personalrondinelli@gmail.com";
-  const assunto = "Novo contato do site feito pelo Leo";
-  const corpo = `Nome: ${name.value.trim()}
-Telefone: ${telefone.value.trim()}
-Mensagem: ${message.value.trim()}`;
+    if (valid) {
+      const destinatario = "personalrondinelli@gmail.com";
+      const assunto = "Novo contato do site feito pelo Leo";
+      const corpo = `Nome: ${name.value.trim()}\nTelefone: ${telefone.value.trim()}\nMensagem: ${message.value.trim()}`;
 
-  // Monta o link mailto
-  const mailtoLink = `mailto:${destinatario}?subject=${encodeURIComponent(assunto)}&body=${encodeURIComponent(corpo)}`;
+      // Monta o link mailto e abre o cliente de e-mail do usuário
+      const mailtoLink = `mailto:${destinatario}?subject=${encodeURIComponent(assunto)}&body=${encodeURIComponent(corpo)}`;
+      window.location.href = mailtoLink;
 
-  // Abre o cliente de e-mail do usuário
-  window.location.href = mailtoLink;
-
-  showSuccess();
-  form.reset();
-}
-
+      showSuccess();
+      form.reset();
+    }
   });
-
-function validatePhone(phone) {
-  // Aceita formatos brasileiros simples: (99) 99999-9999 ou 99999999999
-  return /^\(?\d{2}\)?\s?\d{4,5}-?\d{4}$/.test(phone);
-  }
-
-  function showError(input, msg) {
-    const span = document.createElement('span');
-    span.className = 'error-msg';
-    span.setAttribute('role', 'alert');
-    span.textContent = msg;
-    input.classList.add('input-error');
-    input.parentNode.insertBefore(span, input.nextSibling);
-  }
-
-  function clearErrors() {
-    document.querySelectorAll('.error-msg').forEach(el => el.remove());
-    document.querySelectorAll('.input-error').forEach(el => el.classList.remove('input-error'));
-  }
-
-  function showSuccess() {
-    const feedback = document.getElementById('form-feedback');
-    feedback.textContent = '✅ Mensagem enviada com sucesso! Entraremos em contato em breve.';
-    feedback.className = 'form-success';
-    feedback.style.display = 'block';
-    setTimeout(() => { feedback.style.display = 'none'; }, 5000);
-  }
 }
 
 // ─── 2. NAVBAR: LINK ATIVO CONFORME SEÇÃO VISÍVEL ───────────
@@ -116,20 +103,20 @@ function setupFaqAccordion() {
   const items = document.querySelectorAll('.faq-item');
 
   items.forEach(item => {
-    const btn     = item.querySelector('.faq-question');
-    const answer  = item.querySelector('.faq-answer');
+    const btn    = item.querySelector('.faq-question');
+    const answer = item.querySelector('.faq-answer');
 
     btn.addEventListener('click', () => {
       const isOpen = item.classList.contains('open');
 
-      // Fecha todos
+      // Fecha todos os itens
       items.forEach(i => {
         i.classList.remove('open');
         i.querySelector('.faq-answer').style.maxHeight = null;
         i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
       });
 
-      // Abre o clicado (se estava fechado)
+      // Abre o item clicado (se estava fechado)
       if (!isOpen) {
         item.classList.add('open');
         answer.style.maxHeight = answer.scrollHeight + 'px';
