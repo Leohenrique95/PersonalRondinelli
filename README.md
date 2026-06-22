@@ -95,13 +95,3 @@ O layout adapta-se a três breakpoints:
 3. Não requer servidor ou dependências locais
 
 ---
-
-## Autores
-
-Aluno: Leonardo Henrique da Silva - RA: 25164877-2
-Aluno: Rafael de Oliveira Ferreira - RA: 25178076-2
-Aluno: Thiago Pereira de Paula - RA: 25349592-2
-Trabalho Prático 1 — Programação Front-End  
-Curso: Análise e Desenvolvimento de Sistemas 
-Turma: A (Noturno) - 3° período
-Professor: José Carlos Domingues Flores
